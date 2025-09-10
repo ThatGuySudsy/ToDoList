@@ -6,5 +6,10 @@
     {
         "task": "Ex2",
         "done": true
+    },
+    {
+        "task": "Ex3",
+        "done": false
     }
+
 ]
