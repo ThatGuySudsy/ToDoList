@@ -16,6 +16,10 @@ while True:
         selected -= 1
     elif inp == "m":
         data[selected]["done"] = not data[selected]["done"]
+    elif inp == "d":
+        del data[selected]
+    elif inp == "a":
+        data.append({"task": input("Enter task name: "), "done": False})
     elif inp == "s":
         with open("tasks.json", "w") as f:
             json.dump(data, f, indent=4)
@@ -26,5 +30,4 @@ while True:
         print("'m' to mark as done")
         print("'d' to delete")
         print("'a' to add")
-        input("'t' to toggle showing complete tasks")
         input("'s' to save changes")
